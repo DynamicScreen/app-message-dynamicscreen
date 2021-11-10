@@ -14,7 +14,7 @@ modules:
     - name: modules.simple-message.name
       logo: modules.simple-message.logo
       identifier: simple-message
-      color: #7A00D4
+      color: orange
       type: slide
       description: modules.simple-message.description
       options:
