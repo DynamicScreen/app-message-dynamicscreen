@@ -14,7 +14,22 @@ import {computed} from "vue";
 const en = require("../../languages/en.json");
 const fr = require("../../languages/fr.json");
 
-export const COLOR_CLASSES = {
+export interface ColorClasses {
+  "green": string
+  "cyan": string
+  "blue": string
+  "blue-gray": string
+  "indigo": string
+  "purple": string
+  "pink": string
+  "red": string
+  "orange": string
+  "brown": string
+  "yellow": string
+  "gray": string
+}
+
+export const COLOR_CLASSES: ColorClasses = {
   "green": 'lime-600', // text-lime-600 bg-lime-600 focus:ring-lime-600 border-lime-600
   "cyan": 'teal-400', // text-teal-400 bg-teal-400 focus:ring-teal-400 border-teal-400
   "blue": 'sky-500', // text-sky-500 bg-sky-500 focus:ring-sky-500 border-sky-500
@@ -84,7 +99,8 @@ export default class SimpleMessageSlideModule extends SlideModule {
     this.context = reactive(props.slide.context);
 
     const bgColor = computed(() => {
-        return COLOR_CLASSES[slide.data.background_color];
+      if (slide.data.background_color)
+        return COLOR_CLASSES[slide.data.background_color as keyof ColorClasses];
     })
     const title = ref(slide.data.title)
     const message = ref(slide.data.message)
