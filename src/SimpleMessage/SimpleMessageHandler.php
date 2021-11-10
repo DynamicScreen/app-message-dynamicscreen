@@ -13,15 +13,15 @@ class SimpleMessageHandler extends SlideHandler
         parent::__construct($module);
     }
 
-    public function fetch(ISlide $slide): array
+    public function fetch(ISlide $slide): void
     {
         $default = $this->getDefaultOptions();
 
-        return [
+        $this->addSlide([
             'title' => $slide->getOption('title', $default['title']),
             'message' => $slide->getOption('message', $default['message']),
             'background_color' => $slide->getOption('background_color', $default['background_color']),
-        ];
+        ]);
     }
 
     public function getDefaultOptions(): array
