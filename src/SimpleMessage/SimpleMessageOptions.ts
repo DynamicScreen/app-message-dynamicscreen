@@ -9,6 +9,7 @@ import {
 } from "dynamicscreen-sdk-js";
 
 import i18next from "i18next";
+import {SlideUpdateFunctions} from "../../../../../../../dynamicscreen-sdk-js/src/index";
 
 const en = require("../../languages/en.json");
 const fr = require("../../languages/fr.json");
@@ -63,7 +64,7 @@ export default class SimpleMessageOptionsModule extends SlideModule {
   };
 
   // @ts-ignore
-  setup(props, ctx, update: updateValue, OptionsContext) {
+  setup(props, ctx, update: SlideUpdateFunctions, OptionsContext) {
     const { h, reactive, ref } = ctx;
 
     const { Field, TextInput, ColorPicker } = OptionsContext.components
@@ -72,13 +73,13 @@ export default class SimpleMessageOptionsModule extends SlideModule {
     return () =>
       h("div", {}, [
         h(Field, { label: "Titre" }, [
-          h(TextInput, {...update("title")})
+          h(TextInput, {...update.option("title") })
         ]),
         h(Field, { label: "Message" }, [
-          h(TextInput, {...update("message")})
+          h(TextInput, {...update.option("message") })
         ]),
         h(Field, { label: "Couleur de fond" }, [
-          h(ColorPicker, {...update("background_color")})
+          h(ColorPicker, {...update.option("background_color") })
         ]),
       ]
     )
