@@ -12,12 +12,12 @@
     "modules": {
         "simple-message": {
             "name": "Basic message",
-            "description": "Display a simple message, with description and background color.",
+            "description": "Displays a simple message, with description and background color.",
             "logo": "fas fa-adjust"
         },
         "advanced-message": {
             "name": "Interactive message",
-            "description": "Display customizable advanced message !",
+            "description": "Displays customizable advanced message !",
             "logo": "fas fa-anchor"
         }
     }
