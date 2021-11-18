@@ -1,7 +1,7 @@
 {
     "app": {
         "name": "Message",
-        "description": "Display few kind of messages.",
+        "description": "Displays few kind of messages.",
         "logo": "fa fa-comments",
         "author": {
             "name": "DynamicScreen",
