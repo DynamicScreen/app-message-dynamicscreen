@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/DynamicScreen/dynamicscreen-sdk-php.git",
-                "reference": "3731a4aad3f5edeb95fc5ae18da43233f2c68abc"
+                "reference": "8e7749ca9041713164f7e141133b7d0e446838fd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DynamicScreen/dynamicscreen-sdk-php/zipball/3731a4aad3f5edeb95fc5ae18da43233f2c68abc",
-                "reference": "3731a4aad3f5edeb95fc5ae18da43233f2c68abc",
+                "url": "https://api.github.com/repos/DynamicScreen/dynamicscreen-sdk-php/zipball/8e7749ca9041713164f7e141133b7d0e446838fd",
+                "reference": "8e7749ca9041713164f7e141133b7d0e446838fd",
                 "shasum": ""
             },
             "require": {
@@ -45,7 +45,7 @@
                 "issues": "https://github.com/DynamicScreen/dynamicscreen-sdk-php/issues",
                 "source": "https://github.com/DynamicScreen/dynamicscreen-sdk-php/tree/main"
             },
-            "time": "2021-11-18T14:00:41+00:00"
+            "time": "2021-11-22T15:46:25+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",

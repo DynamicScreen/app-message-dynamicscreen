@@ -1,16 +1,12 @@
 {
-    "require": {
-        "dynamicscreen/sdk-php": "dev-main"
-    },
-    "config": {
-        "optimize-autoloader": true,
-        "preferred-install": "dist",
-        "sort-packages": true
-    },
-    "autoload": {
-        "psr-4": {
-            "DynamicScreen\\Message\\": "src/"
-        }
-    },
-    "minimum-stability": "dev"
+  "config": {
+      "optimize-autoloader": true,
+      "preferred-install": "dist",
+      "sort-packages": true
+  },
+  "autoload": {
+      "psr-4": {
+          "DynamicScreen\\Message\\": "src/"
+      }
+  }
 }
