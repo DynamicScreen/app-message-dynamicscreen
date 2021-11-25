@@ -1,7 +1,5 @@
 {
-    "require": {
-        "dynamicscreen/sdk-php": "dev-main"
-    },
+    "require": {},
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
