@@ -2,7 +2,6 @@
     "app": {
         "name": "Message",
         "description": "Displays few kind of messages.",
-        "logo": "fa fa-comments",
         "author": {
             "name": "DynamicScreen",
             "email": "bonjour@dynamicscreen.com",

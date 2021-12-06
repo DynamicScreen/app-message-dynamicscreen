@@ -2,7 +2,7 @@
 id: app-message-dynamicscreen
 name: app.name
 description: app.description
-logo: app.logo
+logo: fa fa-comments
 version: 0.2.0
 channel: stable
 api-level: 1
@@ -14,7 +14,7 @@ modules:
     - name: modules.simple-message.name
       logo: modules.simple-message.logo
       identifier: simple-message
-      color: orange
+      color: red
       type: slide
       description: modules.simple-message.description
       options:
@@ -28,7 +28,7 @@ modules:
     - name: modules.advanced-message.name
       logo: modules.advanced-message.logo
       identifier: advanced-message
-      color: blue
+      color: red
       type: slide
       description: modules.advanced-message.description
       options:

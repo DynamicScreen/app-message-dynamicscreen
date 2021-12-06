@@ -2,7 +2,6 @@
     "app": {
         "name": "Message",
         "description": "Afficher différents types de messages.",
-        "logo": "fa fa-comments",
         "author": {
             "name": "DynamicScreen",
             "email": "bonjour@dynamicscreen.com",
