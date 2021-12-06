@@ -12,7 +12,7 @@ author:
     email: bonjour@dynamicscreen.com
 modules:
     - name: modules.simple-message.name
-      logo: modules.simple-message.logo
+      logo: fas fa-adjust
       identifier: simple-message
       color: red
       type: slide
@@ -26,7 +26,7 @@ modules:
           node:
               handler: src/handler.js
     - name: modules.advanced-message.name
-      logo: modules.advanced-message.logo
+      logo: fas fa-anchor
       identifier: advanced-message
       color: red
       type: slide

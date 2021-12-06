@@ -11,13 +11,11 @@
     "modules": {
         "simple-message": {
             "name": "Message simple",
-            "description": "Afficher un titre, une description et une couleur de fond.",
-            "logo": "fas fa-adjust"
+            "description": "Afficher un titre, une description et une couleur de fond."
         },
         "advanced-message": {
             "name": "Message détaillé",
-            "description": "Afficher un message détaillé et customisable !",
-            "logo": "fas fa-anchor"
+            "description": "Afficher un message détaillé et customisable !"
         }
     }
 }
