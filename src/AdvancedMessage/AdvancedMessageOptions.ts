@@ -20,13 +20,13 @@ export default class AdvancedMessageOptionsModule extends SlideOptionsModule {
 
       return () =>
         h("div", {}, [
-            h(Field, { label: this.t('modules.simple-message.options.title') }, [
+            h(Field, { label: this.t('modules.advanced-message.options.title') }, [
               h(TextInput, {...update.option("title") })
             ]),
-            h(Field, { label: this.t('modules.simple-message.options.message') }, [
+            h(Field, { label: this.t('modules.advanced-message.options.message') }, [
               h(TextInput, {...update.option("message") })
             ]),
-            h(Field, { label: this.t('modules.simple-message.options.color') }, [
+            h(Field, { label: this.t('modules.advanced-message.options.color') }, [
               h(ColorPicker, {...update.option("background_color") })
             ]),
           ]
