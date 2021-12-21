@@ -11,11 +11,21 @@
     "modules": {
         "simple-message": {
             "name": "Message simple",
-            "description": "Afficher un titre, une description et une couleur de fond."
+            "description": "Afficher un titre, une description et une couleur de fond.",
+            "options": {
+              "title": "Titre",
+              "message": "Message",
+              "bg_color": "Couleur de fond"
+            }
         },
         "advanced-message": {
             "name": "Message détaillé",
-            "description": "Afficher un message détaillé et customisable !"
+            "description": "Afficher un message détaillé et customisable !",
+            "options": {
+              "title": "Titre",
+              "message": "Message",
+              "bg_color": "Couleur de fond"
+            }
         }
     }
 }

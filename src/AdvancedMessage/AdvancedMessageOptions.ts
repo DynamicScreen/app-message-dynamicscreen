@@ -1,88 +1,35 @@
 import {
-    BaseContext,
-    AssetDownload,
-    IAssetsStorageAbility,
-    IGuardsManager,
-    ISlideContext,
-    IPublicSlide,
-    SlideModule
+  ISlideOptionsContext,
+  SlideOptionsModule, VueInstance,
 } from "dynamicscreen-sdk-js";
 
-import i18next from "i18next";
-
-const en = require("../../languages/en.json");
-const fr = require("../../languages/fr.json");
-
-export default class AdvancedMessageOptionsModule extends SlideModule {
-    constructor(context: ISlideContext) {
+export default class AdvancedMessageOptionsModule extends SlideOptionsModule {
+    constructor(context: ISlideOptionsContext) {
         super(context);
     }
-
-    trans(key: string) {
-        return i18next.t(key);
-    };
 
     async onReady() {
         return true;
     };
 
-    onMounted() {
-        console.log('onMounted simple-message OPTIONS')
-    }
+    setup(props: Record<string, any>, vue: VueInstance, context: ISlideOptionsContext) {
+        const { h } = vue;
 
-//@ts-ignore
-    onErrorTracked(err: Error, instance: Component, info: string) {
-    }
+      const update = context.update;
+      const { Field, TextInput, ColorPicker } = this.context.components;
 
-//@ts-ignore
-    onRenderTriggered(e) {
-    }
-
-//@ts-ignore
-    onRenderTracked(e) {
-    }
-
-    onUpdated() {
-    }
-
-    initI18n() {
-        i18next.init({
-            fallbackLng: 'en',
-            lng: 'fr',
-            resources: {
-                en: { translation: en },
-                fr: { translation: fr },
-            },
-            debug: true,
-        }, (err, t) => {
-            if (err) return console.log('something went wrong loading translations', err);
-        });
-    };
-
-// @ts-ignore
-    setup(props, ctx, update, OptionsContext) {
-        const { h, reactive, ref } = ctx;
-
-        const { TextInput, ColorPicker } = OptionsContext.components
-
-        return () =>
-            h("div", {}, () => {
-                return [
-                    h(TextInput, {
-                        modelValue: props.modelValue.title,
-                        "onUpdate:modelValue": (value: string) => ctx.$emit('update:modelValue', {...props.options, title: value })
-                    }),
-                    h(TextInput, {
-                        modelValue: props.modelValue.text,
-                        "onUpdate:modelValue": (value: string) => ctx.$emit('update:modelValue', {...props.options, text: value })
-                    }),
-                    h(ColorPicker, {
-                        modelValue: props.modelValue.color,
-                        id: props.id,
-                        disabled: props.disabled,
-                        "onUpdate:modelValue": (value: string) => ctx.$emit('update:modelValue', {...props.options, color: value })
-                    })
-                ]
-            })
+      return () =>
+        h("div", {}, [
+            h(Field, { label: this.t('modules.simple-message.options.title') }, [
+              h(TextInput, {...update.option("title") })
+            ]),
+            h(Field, { label: this.t('modules.simple-message.options.message') }, [
+              h(TextInput, {...update.option("message") })
+            ]),
+            h(Field, { label: this.t('modules.simple-message.options.color') }, [
+              h(ColorPicker, {...update.option("background_color") })
+            ]),
+          ]
+        )
     }
 }

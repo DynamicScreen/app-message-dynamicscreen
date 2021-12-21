@@ -11,11 +11,21 @@
     "modules": {
         "simple-message": {
             "name": "Basic message",
-            "description": "Displays a simple message, with description and background color."
+            "description": "Displays a simple message, with description and background color.",
+            "options": {
+              "title": "Title",
+              "message": "Message",
+              "bg_color": "Background Color"
+            }
         },
         "advanced-message": {
             "name": "Interactive message",
-            "description": "Displays customizable advanced message !"
+            "description": "Displays customizable advanced message !",
+            "options": {
+              "title": "Title",
+              "message": "Message",
+              "bg_color": "Background Color"
+            }
         }
     }
 }
