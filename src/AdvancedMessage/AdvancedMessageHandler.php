@@ -1,6 +1,6 @@
 <?php
 
-namespace DynamicScreen\Message\SimpleMessage;
+namespace DynamicScreen\Message\AdvancedMessage;
 
 use DynamicScreen\SdkPhp\Handlers\SlideHandler;
 use DynamicScreen\SdkPhp\Interfaces\ISlide;
